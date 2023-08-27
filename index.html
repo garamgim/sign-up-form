@@ -69,12 +69,12 @@
                 <label for="password">PASSWORD</label>
                 <input type="password" id="password"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                    oninput="inputValid(this);" onchange="validatePassword();" required>
+                    oninput="inputValid(this);" onchange="validatePassword();" autocomplete="off" required>
                 <p id="password"></p>
             </div>
             <div>
                 <label for="confirm_password">CONFIRM PASSWORD</label>
-                <input type="password" id="confirm_password" onchange="confirmMatch()" required>
+                <input type="password" id="confirm_password" onchange="confirmMatch()" autocomplete="off" required>
             </div>
         </form>
         <div class="button">
