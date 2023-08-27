@@ -1,5 +1,5 @@
 # sign-up-form
-Sign-up Form with HTML &amp; CSS<br>
+Sign-up Form with HTML &amp; CSS &amp; JavaScript<br>
 <br>
 ## Link
 
