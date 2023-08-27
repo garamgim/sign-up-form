@@ -11,68 +11,69 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=VT323&display=swap" rel="stylesheet">
 </head>
-<section class="left">
-    <div class="logo">
-        <img src="image/logo.png" class="logo">
-        <p>ALIEN JUICE</p>
-    </div>
-</section>
-<section class="right">
-    <div class="promotext">Discover new me! <br> Retrieve your youth in the fanciest way. <br> Subscribe to our daily
-        alien
-        juice
-        and <br>
-        find your own happiness.</div>
-    <form>
-        <div>
-            <label for="first_name">FIRST NAME</label>
-            <input type="text" id="first_name" required>
-        </div>
-        <div>
-            <label for="last_name">LAST NAME</label>
-            <input type="text" id="last_name" required>
-        </div>
-        <div>
-            <label for="user_email">EMAIL</label>
-            <input type="email" id="user_email" required>
-        </div>
-        <div>
-            <label for="phone_number">PHONE NUMBER</label>
-            <!-- Country names and Phone Code -->
-            <select id="code" name="countrycode" required>
-                <option value="">country</option>
-                <option value="61">+61 Australia</option>
-                <option value="1">+1 Canada</option>
-                <option value="86">+86 China</option>
-                <option value="852">+852 Hong Kong</option>
-                <option value="81">+81 Japan</option>
-                <option value="82">+82 Korea, Republic of</option>
-                <option value="60">+60 Malaysia</option>
-                <option value="65">+65 Singapore</option>
-                <option value="886">+886 Taiwan</option>
-                <option value="66">+66 Thailand</option>
-                <option value="44">+44 United Kingdom</option>
-                <option value="1">+1 United States</option>
-            </select>
-            <input type="tel" id="phone_number" required>
-        </div>
-        <div>
-            <label for="password">PASSWORD</label>
-            <input type="password" id="password" required>
-        </div>
-        <div>
-            <label for="confirm_password">CONFIRM PASSWORD</label>
-            <input type="password" id="confirm_password" required>
-        </div>
-    </form>
-    <div class="button">
-        <button id="createid">Create Account</button>
-        <p>Already have an account? <a href="">Log in</a> </p>
-    </div>
-</section>
 
 <body>
-
+    <section class="left">
+        <div class="logo">
+            <img src="image/logo.png" class="logo">
+            <p>ALIEN JUICE&nbsp;&nbsp;</p>
+        </div>
+    </section>
+    <section class="right">
+        <div class="promotext">Discover new me! <br> Retrieve your youth in the fanciest way. <br> Subscribe to our
+            daily
+            alien
+            juice
+            and <br>
+            find your own happiness.</div>
+        <form>
+            <div>
+                <label for="first_name">FIRST NAME</label>
+                <input type="text" id="first_name" pattern="\p{L}+$" oninput="inputValid(this)" required>
+            </div>
+            <div>
+                <label for="last_name">LAST NAME</label>
+                <input type="text" id="last_name" pattern="\p{L}+$" oninput="inputValid(this)" required>
+            </div>
+            <div>
+                <label for="user_email">EMAIL</label>
+                <input type="email" id="user_email" oninput="inputValid(this)" required>
+            </div>
+            <div>
+                <label for="phone_number">PHONE NUMBER</label>
+                <!-- Country names and Phone Code -->
+                <select id="code" name="countrycode" oninput="inputValid(this)" required>
+                    <option value="">country</option>
+                    <option value="61">+61 Australia</option>
+                    <option value="1">+1 Canada</option>
+                    <option value="86">+86 China</option>
+                    <option value="852">+852 Hong Kong</option>
+                    <option value="81">+81 Japan</option>
+                    <option value="82">+82 Korea, Republic of</option>
+                    <option value="60">+60 Malaysia</option>
+                    <option value="65">+65 Singapore</option>
+                    <option value="886">+886 Taiwan</option>
+                    <option value="66">+66 Thailand</option>
+                    <option value="44">+44 United Kingdom</option>
+                    <option value="1">+1 United States</option>
+                </select>
+                <input type="tel" id="phone_number" pattern="[0-9]+$" oninput="inputValid(this)" required>
+            </div>
+            <div>
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" oninput="inputValid(this)" required>
+            </div>
+            <div>
+                <label for="confirm_password">CONFIRM PASSWORD</label>
+                <input type="password" id="confirm_password" oninput="inputValid(this)" required>
+            </div>
+        </form>
+        <div class="button">
+            <button type="submit" id="submit" name="send">Create Account</button>
+            <p>Already have an account? <a href="">Log in</a> </p>
+        </div>
+    </section>
 </body>
+<script src="app.js"></script>
 
 </html>

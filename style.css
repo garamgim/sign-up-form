@@ -81,6 +81,20 @@ input {
 select {
     width: 80px;
     height: 26px;
+
+}
+
+select:focus {
+    outline: none !important;
+    border: 1.5px solid #d5e152;
+    box-shadow: 0 0 10px #d5e152;
+}
+
+select:invalid:focus,
+select.invalid {
+    outline: none !important;
+    border: 1.5px solid red;
+    box-shadow: 0 0 10px red;
 }
 
 input#phone_number {
@@ -93,7 +107,8 @@ input:focus {
     box-shadow: 0 0 10px #d5e152;
 }
 
-input:invalid {
+input:invalid:focus,
+input.invalid {
     outline: none !important;
     border: 1.5px solid red;
     box-shadow: 0 0 10px red;
@@ -107,15 +122,15 @@ div.button {
 }
 
 button {
+    background-color: #617A55;
+    transition: all 0.25s;
     font-family: 'Creepster', cursive;
     padding: 5px 10px;
     height: 40px;
     font-size: 20px;
     border-radius: 16px;
-    background-color: #617A55;
-    color: white;
-    transition: all 0.25s;
     white-space: nowrap;
+    color: white;
 }
 
 button:hover {
