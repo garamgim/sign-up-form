@@ -101,14 +101,14 @@ input#phone_number {
     width: 115px;
 }
 
-input:focus {
+input:focus:not(#confirm_password) {
     outline: none !important;
     border: 1.5px solid #d5e152;
     box-shadow: 0 0 10px #d5e152;
 }
 
-input:invalid:focus,
-input.invalid {
+input:invalid:focus:not(#confirm_password),
+input.invalid:not(#confirm_password) {
     outline: none !important;
     border: 1.5px solid red;
     box-shadow: 0 0 10px red;
