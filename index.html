@@ -44,23 +44,25 @@
             <div>
                 <label for="phone_number">PHONE NUMBER</label>
                 <!-- Country names and Phone Code -->
-                <select id="code" name="countrycode" oninput="inputValid(this)" required>
-                    <option value="">country</option>
-                    <option value="61">+61 Australia</option>
-                    <option value="1">+1 Canada</option>
-                    <option value="86">+86 China</option>
-                    <option value="852">+852 Hong Kong</option>
-                    <option value="81">+81 Japan</option>
-                    <option value="82">+82 Korea, Republic of</option>
-                    <option value="60">+60 Malaysia</option>
-                    <option value="65">+65 Singapore</option>
-                    <option value="886">+886 Taiwan</option>
-                    <option value="66">+66 Thailand</option>
-                    <option value="44">+44 United Kingdom</option>
-                    <option value="1">+1 United States</option>
-                </select>
-                <input type="tel" id="phone_number" pattern="[0-9]+$" oninput="inputValid(this)" autocomplete="mobile"
-                    required>
+                <div>
+                    <select id="code" name="countrycode" oninput="inputValid(this)" required>
+                        <option value="">country</option>
+                        <option value="61">+61 Australia</option>
+                        <option value="1">+1 Canada</option>
+                        <option value="86">+86 China</option>
+                        <option value="852">+852 Hong Kong</option>
+                        <option value="81">+81 Japan</option>
+                        <option value="82">+82 Korea, Republic of</option>
+                        <option value="60">+60 Malaysia</option>
+                        <option value="65">+65 Singapore</option>
+                        <option value="886">+886 Taiwan</option>
+                        <option value="66">+66 Thailand</option>
+                        <option value="44">+44 United Kingdom</option>
+                        <option value="1">+1 United States</option>
+                    </select>
+                    <input type="tel" id="phone_number" pattern="[0-9]+$" oninput="inputValid(this)"
+                        autocomplete="mobile" required>
+                </div>
             </div>
             <div>
                 <!-- Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character -->
