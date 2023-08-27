@@ -30,16 +30,16 @@
             <div>
                 <label for="first_name">FIRST NAME</label>
                 <input type="text" id="first_name" pattern="\p{L}+$" oninput="inputValid(this)"
-                    autocomplete="given-name" required>
+                    autocomplete="given-name" required />
             </div>
             <div>
                 <label for="last_name">LAST NAME</label>
                 <input type="text" id="last_name" pattern="\p{L}+$" oninput="inputValid(this)"
-                    autocomplete="family-name" required>
+                    autocomplete="family-name" required />
             </div>
             <div>
                 <label for="user_email">EMAIL</label>
-                <input type="email" id="user_email" oninput="inputValid(this)" autocomplete="email" required>
+                <input type="email" id="user_email" oninput="inputValid(this)" autocomplete="email" required />
             </div>
             <div>
                 <label for="phone_number">PHONE NUMBER</label>
@@ -61,7 +61,7 @@
                         <option value="1">+1 United States</option>
                     </select>
                     <input type="tel" id="phone_number" pattern="[0-9]+$" oninput="inputValid(this)"
-                        autocomplete="mobile" required>
+                        autocomplete="mobile" required />
                 </div>
             </div>
             <div>
@@ -69,17 +69,18 @@
                 <label for="password">PASSWORD</label>
                 <input type="password" id="password"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                    oninput="inputValid(this);" onchange="validatePassword();" autocomplete="off" required>
+                    oninput="inputValid(this);" onchange="validatePassword();" autocomplete="off" required />
                 <p id="password"></p>
             </div>
             <div>
                 <label for="confirm_password">CONFIRM PASSWORD</label>
-                <input type="password" id="confirm_password" onchange="confirmMatch()" autocomplete="off" required>
+                <input type="password" id="confirm_password" onchange="confirmMatch()" autocomplete="off" required />
             </div>
         </form>
         <div class="button">
             <button type="submit" id="submit" name="send">Create Account</button>
-            <p>Already have an account? <a href="">Log in</a> </p>
+            <p>Already have an account? <a href="https://www.youtube.com/watch?v=A0VYsiMtrNE&list=LL&index=49">Log
+                    in</a> </p>
         </div>
     </section>
 </body>

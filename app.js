@@ -4,11 +4,18 @@ const select = document.querySelector('select');
 const button = document.getElementById('submit');
 const form = document.querySelector('form');
 
-let formValid = form.checkValidity();
 
-
-// checkin form validity upon submission
+// checking form validity upon submission
 button.addEventListener('click', (e) => {
+
+    // checking if all the inputs are valid
+    validationArray = [];
+
+    inputs.forEach(input => {
+        validationArray.push(input.checkValidity());
+    })
+
+    let formValid = !validationArray.includes(false);
 
     // initializing inputs' validity in case it has already been clicked
     inputs.forEach(input => {
@@ -30,9 +37,11 @@ button.addEventListener('click', (e) => {
 
     } else {
 
-        form.addEventListener("submit");
+        console.log('success');
+        window.location.href = "submission.html";
 
     }
+
 })
 
 
@@ -44,7 +53,7 @@ function inputValid(input) {
 }
 
 
-// password confirm checking
+// password validation
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm_password');
 const reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
